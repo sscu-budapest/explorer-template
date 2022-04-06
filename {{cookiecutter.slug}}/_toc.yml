@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+chapters:
+{% for table in tables %}
+- file: homes/{{table}}
+  sections:
+  - glob: tables/{{table}}/*
+{% endfor %}
+# - file: mermaid

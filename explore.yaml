@@ -1,0 +1,11 @@
+registry: ...
+remote:
+  bucket: some-bucket
+  endpoint: ...
+tables: 
+   table-one:
+     project: sg
+     namespace: core
+     table: fing
+     env: boo
+     version: v0.1

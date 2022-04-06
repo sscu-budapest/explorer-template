@@ -1,0 +1,25 @@
+title: Data Catalog
+author: DataZimmer
+copyright: "{% now 'local', '%Y' %}"
+# logo: logo.png
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "*.csv"]
+execute:
+  execute_notebooks: force
+
+# repository:
+#  url: https://github.com/executablebooks/jupyter-book
+#  path_to_book: book
+#  branch: main
+
+html:
+  use_repository_button: false
+  use_issues_button: false
+  extra_navbar: ""
+  home_page_in_navbar: false  # Whether to include your home page in the left Navigation Bar
+
+
+sphinx:
+  config:
+    language: en
+  extra_extensions:
+   - sphinxcontrib.mermaid
