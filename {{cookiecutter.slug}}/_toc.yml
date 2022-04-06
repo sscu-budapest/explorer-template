@@ -4,7 +4,7 @@
 format: jb-book
 root: index
 chapters:
-{% for table in tables.tables %}
+{% for table in cookiecutter.tables.tables %}
 - file: homes/{{table}}
   sections:
   - glob: tables/{{table}}/*
