@@ -4,7 +4,7 @@
 format: jb-book
 root: index
 chapters:
-{% for table in tables %}
+{% for table in tables.tables %}
 - file: homes/{{table}}
   sections:
   - glob: tables/{{table}}/*
