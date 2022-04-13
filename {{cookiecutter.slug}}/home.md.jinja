@@ -1,15 +1,14 @@
 {% raw %}
-# {{ name }} Table
-
-> {{ description }}
-
-
-- <a href="{{profile_url}}">profile</a>
-- <a href="{{csv_url}}">download csv</a>
-- last updated: {{update_date}}
+```{include} ../headers/{{slug}}.md
+```
 
 
-## Exploratory Notebooks
+```{admonition} Description
+A table describing {{n_rows}} {{entity}}s, with {{n_cols}} columns, created <a href="{{project_url}}">here</a>
+```
+
+
+## Exploration
 
 ```{tableofcontents}
 ```
