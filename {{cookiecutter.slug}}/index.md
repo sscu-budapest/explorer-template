@@ -1,8 +1,8 @@
 # Data Exploration Catalog
 
-- not for reproducibility but of exploration
-- tables are updated automatically
-- main thing to be manually edited are the exploratory notebooks
+> A set of simple tables for exploratory data analysis to share ideas and inspire research.
+
+The main point is not reproducibility, but exploration. The tables usually update periodically, they can be downloaded in csv format.
 
 ## Tables
 
