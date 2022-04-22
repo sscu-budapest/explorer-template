@@ -4,11 +4,13 @@
 format: jb-book
 root: index
 chapters:
-{% for table in cookiecutter.tables.tables %}
-- file: homes/{{table.slug}}
+{% for dataset in cookiecutter.datasets.datasets %}
+- file: dataset-pages/{{dataset.slug}}
   sections:
+{% for table in dataset.tables %}
   - url: {{table.profile_url}}
-    title: Table Profile
-  - glob: tables/{{table.slug}}/*
+    title: {{table.name|title}} Table Profile
+{% endfor %}
+  - glob: datasets/{{dataset.slug}}/*
 {% endfor %}
 # - file: mermaid

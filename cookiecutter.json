@@ -1,4 +1,5 @@
 {
     "slug": "book",
-    "tables": {"tables": []}
+    "datasets": {"datasets": []},
+    "main": {}
 }
