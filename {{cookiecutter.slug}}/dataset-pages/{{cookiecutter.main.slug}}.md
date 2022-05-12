@@ -34,7 +34,7 @@
 
 ```{div} col-4
 
-**subject**: {{table.entity}}
+ <a href="{{table.profile_url}}">{badge}`table description,badge-primary`</a>
 
 ```
 
