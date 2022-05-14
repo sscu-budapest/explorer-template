@@ -2,12 +2,13 @@
 
 ```{include} ../homes/{{cookiecutter.main.slug}}.md
 ```
-
+{% if cookiecutter.main.erd_mermaid %}
 ## ERD
 
 ```{mermaid}
 {{ cookiecutter.main.erd_mermaid }}
 ```
+{% endif %}
 
 ## Exploration / Analysis
 
