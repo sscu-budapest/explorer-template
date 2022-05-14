@@ -3,7 +3,19 @@
 ```{include} ../homes/{{cookiecutter.main.slug}}.md
 ```
 
----
+## ERD
+
+```{mermaid}
+{{ cookiecutter.main.erd_mermaid }}
+```
+
+## Exploration / Analysis
+
+
+
+## Tables
+
+> There {% if cookiecutter.main.n_tables|int > 1 %}are{% else %}is{% endif %} {{cookiecutter.main.n_tables}} table{% if cookiecutter.main.n_tables|int > 1 %}s{% endif %}{% if cookiecutter.main.update_str %} and the [sources](#sources) are **checked for updates {{ cookiecutter.main.update_str }}** {% endif %}
 
 {% for table in cookiecutter.main.tables %}
 
@@ -12,12 +24,12 @@
 
 ::::{div} row
 
-```{div} col-8
+```{div} col-9
 **{{table.name}} Table**
 ```
 
-```{div} col-4
- <a href="{{table.csv_url}}">{badge}`download csv,badge-primary`</a>
+```{div} col-3
+ <a href="{{table.csv_url}}">{badge}`Download CSV,badge-primary`</a>
 ```
 ::::
 
@@ -25,16 +37,16 @@
 ::::{div} row
 
 ```{div} col-4
-**size**: {{table.n_rows}} × {{table.n_cols}}
+**Size**: {{table.n_rows}} × {{table.n_cols}} ({{table.csv_filesize}})
 ```
 
-```{div} col-4
-**updated**: {{table.update_date}}
+```{div} col-5
+**Last Changed**: {{table.update_date}}
 ```
 
-```{div} col-4
+```{div} col-3
 
- <a href="{{table.profile_url}}">{badge}`table description,badge-primary`</a>
+ <a href="{{table.profile_url}}">{badge}`Open Table Profile,badge-success`</a>
 
 ```
 
@@ -52,8 +64,3 @@
 {% for url in cookiecutter.main.source_urls %}  - {{url}}
 {% endfor %}
 {% endif %}
-
-## Exploration
-
-```{tableofcontents}
-```
