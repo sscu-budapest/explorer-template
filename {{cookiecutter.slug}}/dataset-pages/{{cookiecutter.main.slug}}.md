@@ -5,6 +5,9 @@
 {% if cookiecutter.main.erd_mermaid %}
 ## ERD
 
+> this is an [ERD Diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) / [Schema Diagram](https://en.wikipedia.org/wiki/Database_schema) mix, explained clearly here. Maybe
+
+
 ```{mermaid}
 {{ cookiecutter.main.erd_mermaid }}
 ```
