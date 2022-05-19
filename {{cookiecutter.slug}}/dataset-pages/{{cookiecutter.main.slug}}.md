@@ -5,10 +5,17 @@
 {% if cookiecutter.main.erd_mermaid %}
 ## ERD
 
-```{note}
-WIP: extend this
+```{admonition} What is an Entity Relationship Diagram (ERD)?
+:class: dropdown
+An **entity relationship diagram (ERD)** shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data, for example a variable. An entity set is a collection of similar entities. These entities can have attributes that define their properties.
 
-This is an [ERD Diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) / [Schema Diagram](https://en.wikipedia.org/wiki/Database_schema) mix. It is generated automatically from the code that creates the data. It shows names and types of variables stored in different tables, and the links between them.
+By defining the entities, and their attributes, and showing the relationships between them, an ER diagram illustrates the logical structure of databases. 
+
+Each table demonstrates an entity set, where the rows represent the entities. Each entity set contains a **primary key (PK)** which is unique in the table. A primary key can be one entity, for example, a tax number or a set of entities like longitude and latitude in spatial data.
+
+An entity set may have got a **foreign key (FK)**. It means that the table is connected to another table's primary key. This **relationship** can be represented by a line with a **sign** on its every ending. The sign specifies how many instances of an entity relate to one instance of another entity:
+- double lines (one)
+- branching line (more)
 ```
 
 
