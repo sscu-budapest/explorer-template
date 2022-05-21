@@ -7,6 +7,6 @@ chapters:
 {% for dataset in cookiecutter.datasets.datasets %}
 - file: dataset-pages/{{dataset.slug}}
   sections:
-  - glob: datasets/{{dataset.slug}}/*
+  - glob: datasets/{{dataset.slug}}/*.ipynb
 {% endfor %}
 # - file: mermaid

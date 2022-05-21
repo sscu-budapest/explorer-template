@@ -4,7 +4,7 @@ copyright: "{% now 'local', '%Y' %}"
 # logo: logo.png
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "*.csv"]
 execute:
-  execute_notebooks: force
+  execute_notebooks: 'off'
 
 # repository:
 #  url: https://github.com/executablebooks/jupyter-book

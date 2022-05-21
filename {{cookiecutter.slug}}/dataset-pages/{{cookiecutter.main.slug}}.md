@@ -1,6 +1,6 @@
 # {{cookiecutter.main.name}}
 
-```{include} ../homes/{{cookiecutter.main.slug}}.md
+```{include} ../datasets/{{cookiecutter.main.slug}}/description.md
 ```
 {% if cookiecutter.main.erd_mermaid %}
 ## ERD
@@ -23,50 +23,25 @@ This is an [ERD Diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationsh
 Here are some summaries of initial analyses we conducted on the tables of the dataset.
 ```
 
+{% for notebook in cookiecutter.main.notebooks %}
 
-WIP: cards here, that summarize the notebooks where we put some analysis, looks something like this:
+[{{notebook.title}}](../datasets/{{cookiecutter.main.slug}}/{{notebook.name}})
 
-:::::{panels}
+{% for figure in notebook.figures %}
 
-:header: bg-warning
-:column: col-12
+![thing](../datasets/{{cookiecutter.main.slug}}/{{figure}})
 
-::::{div} row
+{% endfor %}
 
-```{div} col-4
-**Notebook Title**
+
+{% for html_out in notebook.output_html %}
+
+```{include} ../datasets/{{cookiecutter.main.slug}}/{{html_out}}
 ```
+{% endfor %}
 
-```{div} col-4
-Subtitle if possible?
-```
 
-```{div} col-4
- <a href="../datasets/{{cookiecutter.main.slug}}/intro.html">{badge}`Open Notebook,badge-success`</a>
-```
-::::
-
-^^^
-::::{div} row
-
-```{div} col-4
-??
-```
-
-```{div} col-4
-**Modified**: 2022-04-24 21:41?
-```
-
-```{div} col-4
- <a href="">{badge}`Download Notebook?,badge-primary`</a>
-```
-
-::::
-
-:::::
-
-```{tableofcontents}
-```
+{% endfor %}
 
 
 ## Tables
@@ -118,6 +93,11 @@ Also, in some cases, the dataset updates periodically, the logic of this is summ
 ::::
 
 :::::
+
+### head
+
+{{ table.head_html }}
+
 
 {% endfor %}
 
