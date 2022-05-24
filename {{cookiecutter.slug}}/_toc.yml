@@ -6,7 +6,6 @@ root: index
 chapters:
 {% for dataset in cookiecutter.datasets.datasets %}
 - file: dataset-pages/{{dataset.slug}}
-  sections:
-  - glob: datasets/{{dataset.slug}}/*
+  sections: {% for notebook in dataset.notebooks %}
+  - file: datasets/{{dataset.slug}}/{{notebook.name}} {% endfor %}
 {% endfor %}
-# - file: mermaid

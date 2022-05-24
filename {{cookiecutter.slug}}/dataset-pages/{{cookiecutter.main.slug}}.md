@@ -1,6 +1,6 @@
 # {{cookiecutter.main.name}}
 
-```{include} ../homes/{{cookiecutter.main.slug}}.md
+```{include} ../datasets/{{cookiecutter.main.slug}}/description.md
 ```
 {% if cookiecutter.main.erd_mermaid %}
 ## Entity Relationship Diagram (ERD)
@@ -31,7 +31,7 @@ An entity set may have got a **foreign key (FK)**. It means that the table is co
 These are some summaries of the initial analyses we conducted on the tables of the dataset. They are based on our ideas that we think can be **further explored in a research project**.
 
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
-
+```
 
 **Notebooks here**
 

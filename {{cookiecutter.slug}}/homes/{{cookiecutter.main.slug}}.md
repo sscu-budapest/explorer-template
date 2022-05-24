@@ -1,1 +1,0 @@
-A dataset of {{cookiecutter.main.n_tables}} table{% if cookiecutter.main.n_tables|int > 1 %}s{% endif %}.
