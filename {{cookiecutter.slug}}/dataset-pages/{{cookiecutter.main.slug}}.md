@@ -33,47 +33,7 @@ These are some summaries of the initial analyses we conducted on the tables of t
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
 
 
-:::::{panels}
-
-:header: bg-warning
-:column: col-12
-
-::::{div} row
-
-```{div} col-4
-**Notebook Title**
-```
-
-```{div} col-4
-Subtitle if possible?
-```
-
-```{div} col-4
- <a href="../datasets/{{cookiecutter.main.slug}}/intro.html">{badge}`Open Notebook,badge-success`</a>
-```
-::::
-
-^^^
-::::{div} row
-
-```{div} col-4
-??
-```
-
-```{div} col-4
-**Modified**: 2022-04-24 21:41?
-```
-
-```{div} col-4
- <a href="">{badge}`Download Notebook?,badge-primary`</a>
-```
-
-::::
-
-:::::
-
-```{tableofcontents}
-```
+**Notebooks here**
 
 
 ## Tables
