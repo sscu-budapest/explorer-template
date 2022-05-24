@@ -1,4 +1,4 @@
-# Data Exploration Catalog Tutorial
+# Data Exploration Catalog
 
 ```{admonition} How this catalog works?
 :class: dropdown
