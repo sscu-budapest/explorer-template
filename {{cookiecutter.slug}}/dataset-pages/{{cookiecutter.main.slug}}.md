@@ -33,9 +33,79 @@ These are some summaries of the initial analyses we conducted on the tables of t
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
 ```
 
-**Notebooks here**
+{% for notebook in cookiecutter.main.notebooks %}
 
 
+:::::{panels} 
+    :body: bg-warning
+    :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**{{notebook.title}} Analysis**
+```
+
+```{div} col-4
+ <a href="../datasets/{{cookiecutter.main.slug}}/{{notebook.name}}.html">{badge}`Open Notebook,badge-success`</a>
+```
+
+{% if (notebook.figures|length + notebook.output_html|length) == 0 %}
+    {% set button_text = "No Figures" %}
+    {% set button_disabled = "disabled" %}
+{% else %}
+    {% set button_text = "Figures" %}
+    {% set button_disabled = "" %}
+{% endif %}
+
+
+```{div} col-4
+<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', {{loop.index0}}, true)" {{button_disabled}}>{{button_text}}</button>
+
+```
+::::
+:::::
+
+::::::{div} slideshow start-dis
+:::::{panels}
+:container: container-lg
+:column: col-12
+
+::::{div} row 
+
+{% for figure in notebook.figures %}
+```{image} ../datasets/{{cookiecutter.main.slug}}/{{figure}}
+:class: myslides start-dis 
+:align: center
+```
+{% endfor %}
+
+{% for html_out in notebook.output_html %}
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/{{cookiecutter.main.slug}}/{{html_out}}
+```
+:::
+{% endfor %}
+
+::::
+
+^^^
+::::{div} row
+
+<div class = "col-6 docutils" align = "right">
+<button  onclick="slideImage({{loop.index0}}, -1)">&#10094;</button>
+</div>
+
+<div class = "col-6 docutils" align = "left">
+<button  onclick="slideImage({{loop.index0}}, 1)">&#10095;</button>
+</div>
+
+::::
+
+:::::
+::::::
+
+{% endfor %}
 ## Tables
 
 ```{admonition} How should I use this?
@@ -65,13 +135,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **{{table.name}} Table**
 ```
 
-```{div} col-3
+```{div} col-4
  <a href="{{table.csv_url}}">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-4
+ <a href="{{table.profile_url}}">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -81,22 +156,20 @@ Some datasets are updated periodically. In this case, you can check the updating
 **Size**: {{table.n_rows}} × {{table.n_cols}} ({{table.csv_filesize}})
 ```
 
-```{div} col-5
+```{div} col-4
 **Last Changed**: {{table.update_date}}
 ```
 
-```{div} col-3
-
- <a href="{{table.profile_url}}">{badge}`Open Table Profile,badge-success`</a>
-
+```{div} col-4
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', {{loop.index0}})">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+{{table.head_html }}
+::::
 {% endfor %}
-
 
 ## Sources
 
