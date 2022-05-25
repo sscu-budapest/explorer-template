@@ -41,10 +41,10 @@ Here are some summaries of initial analyses we conducted on the tables of the da
 ```
 
 {% if (notebook.figures|length + notebook.output_html|length) == 0 %}
-    {% set button_text = "No Figure" %}
+    {% set button_text = "No Figures" %}
     {% set button_disabled = "disabled" %}
 {% else %}
-    {% set button_text = "Figure" %}
+    {% set button_text = "Figures" %}
     {% set button_disabled = "" %}
 {% endif %}
 
@@ -61,16 +61,17 @@ Here are some summaries of initial analyses we conducted on the tables of the da
 :container: container-lg
 :column: col-12
 
-::::{div} row
+::::{div} row 
 
 {% for figure in notebook.figures %}
 ```{image} ../datasets/{{cookiecutter.main.slug}}/{{figure}}
-:class: myslides start-dis
+:class: myslides start-dis 
+:align: center
 ```
 {% endfor %}
 
 {% for html_out in notebook.output_html %}
-:::{div} myslides start-dis
+:::{div} myslides start-dis col-12 slide-container
 ```{include} ../datasets/{{cookiecutter.main.slug}}/{{html_out}}
 ```
 :::

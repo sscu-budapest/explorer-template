@@ -6,7 +6,14 @@ function hideReveal(className, panelIndex, imagePanel = false) {
       elements[panelIndex].style.display = "block";
     }
     if (imagePanel) {
-        slideImage(panelIndex, 0);
+        var images = document.getElementsByClassName("slideshow")[panelIndex].getElementsByClassName("myslides");
+        for (let i = 0; i < images.length; i++){
+            images[i].style.display = "none";
+            }      
+        
+        
+        slideImage(panelIndex, 0);     
+
     }
 }
    

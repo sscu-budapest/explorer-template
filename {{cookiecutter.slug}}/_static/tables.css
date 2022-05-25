@@ -1,6 +1,10 @@
 .start-dis{
     display: none;
 }
+.slide-container{
+    max-height: 20em;
+    overflow: scroll;
+}
 table {
     margin-left: auto;
     margin-right: auto;
