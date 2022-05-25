@@ -5,6 +5,9 @@
     max-height: 20em;
     overflow: scroll;
 }
+.bd-content .section table{
+    display: table;
+}
 table {
     margin-left: auto;
     margin-right: auto;

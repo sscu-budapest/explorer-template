@@ -147,8 +147,8 @@ Also, in some cases, the dataset updates periodically, the logic of this is summ
 ::::
 :::::
 
-::::{div} head-dataframe start-dis
-{{ table.head_html }}
+::::{div} head-dataframe start-dis col-12 slide-container
+{{table.head_html }}
 ::::
 {% endfor %}
 
