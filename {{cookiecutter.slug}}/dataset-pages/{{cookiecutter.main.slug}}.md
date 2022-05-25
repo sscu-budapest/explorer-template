@@ -43,10 +43,10 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row
 
 ```{div} col-4
-**{{notebook.title}} Analysis**
+**{{notebook.title}}**
 ```
 
-```{div} col-4
+```{div} col-5
  <a href="../datasets/{{cookiecutter.main.slug}}/{{notebook.name}}.html">{badge}`Open Notebook,badge-success`</a>
 ```
 
@@ -59,7 +59,7 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 {% endif %}
 
 
-```{div} col-4
+```{div} col-3
 <button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', {{loop.index0}}, true)" {{button_disabled}}>{{button_text}}</button>
 
 ```
@@ -139,11 +139,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 **{{table.name}} Table**
 ```
 
-```{div} col-4
+```{div} col-5
  <a href="{{table.csv_url}}">{badge}`Download CSV,badge-primary`</a>
 ```
 
-```{div} col-4
+```{div} col-3
  <a href="{{table.profile_url}}">{badge}`Open Table Profile,badge-success`</a>
 ```
 
@@ -156,11 +156,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 **Size**: {{table.n_rows}} × {{table.n_cols}} ({{table.csv_filesize}})
 ```
 
-```{div} col-4
+```{div} col-5
 **Last Changed**: {{table.update_date}}
 ```
 
-```{div} col-4
+```{div} col-3
 <button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', {{loop.index0}})">First 5 rows</button>
 ```
 ::::
