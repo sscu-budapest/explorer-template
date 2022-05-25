@@ -7,10 +7,12 @@ This site refreshes regularly and is intended to help researchers engage with a 
 The diagram below presents the datasets contained in the catalog, with the tables within each dataset. You can see the basic explorative analysis of the tables by clicking on them.
 ```
 
-```{include} mermaid.md
-```
-
 ## Datasets
 
 ```{tableofcontents}
+```
+
+## Diagram of Tables
+
+```{include} mermaid.md
 ```
