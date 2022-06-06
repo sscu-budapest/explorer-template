@@ -1,5 +1,6 @@
 {
     "slug": "book",
     "datasets": {"datasets": []},
-    "main": {}
+    "main": {},
+    "google_analytics": null
 }
