@@ -16,6 +16,9 @@ html:
   use_issues_button: false
   extra_navbar: ""
   home_page_in_navbar: false  # Whether to include your home page in the left Navigation Bar
+  {% if cookiecutter.google_analytics %}
+  google_analytics_id: G-8SMZ9X5ZLW
+  {% endif %}
 
 
 sphinx:
